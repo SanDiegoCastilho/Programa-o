@@ -5,7 +5,7 @@ int main(void){
 	int Segundos, Minutos, Horas;
 
 	printf("Digite o total de segundos: ");
-	scanf("%d", &Segundos);
+	scanf("%f", &Segundos);
 
 	Horas = Segundos/3600;
 	Segundos = Segundos - Horas * 3600;
