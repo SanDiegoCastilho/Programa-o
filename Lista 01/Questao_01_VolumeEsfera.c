@@ -1,19 +1,18 @@
 #include <stdio.h>
+#include <math.h>
+#define pi 3.14159 
 
+
+/*Calcula o volume de uma esfera com o raio dado.*/
 int main(void){
+	float Raio, CuboRaio, Volume;
 
-	float pi = 3.1415;
-	float raio;
-	float CuboRaio;
-	float volume;
+	printf("Digite o valor do raio: ");
+	scanf("%f", &Raio);
 
-	printf("Digite o valor do raio (cm³): ");
-	scanf("%f", &raio);
+	Volume = 4/3 * pi * pow(Raio,3);
 
-	CuboRaio = raio * raio * raio;
-	volume = 4/3 * pi * CuboRaio;
-
-	printf("O volume da esfera vale: %2.5f cm³ \n ", volume);
+	printf("O volume da esfera vale: %.5f cm³ \n ", Volume);
 
 	return 0;
 }

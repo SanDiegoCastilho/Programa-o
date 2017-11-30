@@ -1,11 +1,8 @@
 #include <stdio.h>
 
+/*Calcula o preço da gasolina em R$ dado o preço do galão em U$*/
 int main(void){
-
-	float PrecoGalaoDolar;
-	float PrecoGalaoReal;
-	float ValorLitro;
-	float TaxaConversao;
+	float PrecoGalaoDolar, PrecoGalaoReal, ValorLitro, TaxaConversao;
 
 	printf("Digite o valor do galão em dólares: ");
 	scanf("%f", &PrecoGalaoDolar);
@@ -16,6 +13,7 @@ int main(void){
 	PrecoGalaoReal = TaxaConversao * PrecoGalaoDolar;
 	ValorLitro = PrecoGalaoReal / 3.7854;
 
-	printf("O valor do litro da gasolina em reais seria: %2.3f R$\n", ValorLitro);
+	printf("O valor do litro da gasolina em reais seria: %.3f R$\n", ValorLitro);
+
 	return 0;
 }
