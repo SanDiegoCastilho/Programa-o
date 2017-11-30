@@ -15,6 +15,9 @@ typedef struct viagem{
 //Cira uma nova viagem
 Viagem *nova_v(int dia, int mes, int ano, char *cidade, char *pais, int periodo);
 
+//Libera uma viagem
+void libera_v(Viagem *viagem);
+
 int VerificaCidade(char *cidade){
 	int Resultado = (cidade == NULL || strlen(cidade) > 60) ? 0 : 1;
 
@@ -47,4 +50,20 @@ Viagem *nova_v(int dia, int mes, int ano, char *cidade, char *pais, int periodo)
 	pont->direita = NULL;
 	pont->esquerda = NULL;
 
+	return pont;
+}
+
+void libera_v(Viagem *viagem){
+	if(viagem != NULL){
+		viagem->id = 0;
+		viagem->dia = 0;
+		viagem->mes = 0;
+		viagem->ano = 0;
+		viagem->pais = "";
+		viagem->cidade = "";
+		viagem->periodo = 0;
+		viagem->pai = NULL;
+		viagem->direita = NULL;
+		viagem->esquerda = NULL;
+	}
 }
